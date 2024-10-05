@@ -9,8 +9,6 @@ export class SignUpUser {
     public street: number,
     public number: string,
     public zipcode: string,
-    public lat: string,
-    public long: string,
     public phone: string,
   ) {}
 }

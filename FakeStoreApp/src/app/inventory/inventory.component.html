@@ -2,13 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Furniture Store</title>
+  <title>Inventory</title>
 </head>
 <body>
+<h1>Products</h1>
 
-<script>fetch('https://fakestoreapi.com/products')
-  .then(res=>res.json())
-  .then(json=>console.log(json))</script>
+<div>
+  <img src="getProductImage(0)"  alt="image">
+  <p>{{getProductTitle(0)}}</p>
+  <p>{{getProductPrice(0)}}</p>
+
+  <button type="button" (click)="viewProduct(getProductID(0))">
+    View Product
+  </button>
+</div>
 
 </body>
 </html>

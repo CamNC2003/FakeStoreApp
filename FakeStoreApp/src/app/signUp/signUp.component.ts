@@ -13,7 +13,7 @@ import {FormsModule} from "@angular/forms";
 })
 export class SignUpComponent {
 
-  user = new SignUpUser("","","","","","",0,"","","","","")
+  user = new SignUpUser("","","","","","",0,"","","")
 
   onSubmit(){
 
@@ -34,8 +34,8 @@ export class SignUpComponent {
             number:this.user.number,
             zipcode: this.user.zipcode,
             geolocation:{
-              lat: this.user.lat,
-              long:this.user.long,
+              lat: "0.00",
+              long: "0.00",
             }
           },
           phone:this.user.phone,

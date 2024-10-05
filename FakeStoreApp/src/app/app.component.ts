@@ -8,12 +8,13 @@ import { SignInComponent } from './signIn/signIn.component';
 import {AccountComponent} from "./account/account.component";
 import {SignUpComponent} from "./signUp/signUp.component";
 import {NavComponent} from "./nav/nav.component";
+import {ProductComponent} from "./product/product.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterLink, RouterOutlet, HomeComponent, AboutComponent, InventoryComponent, AccountComponent, FeedbackComponent,
-    SignInComponent, SignUpComponent, NavComponent],
+    SignInComponent, SignUpComponent, NavComponent, ProductComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
