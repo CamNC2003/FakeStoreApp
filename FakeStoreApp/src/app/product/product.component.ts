@@ -2,19 +2,26 @@ import { Component, OnInit} from '@angular/core';
 
 import { Product} from "../shared/Product";
 import {ActivatedRoute, Router} from "@angular/router";
+import {NavComponent} from "../nav/nav.component";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css'],
+  imports: [
+    NavComponent
+  ],
   standalone: true
 })
 export class ProductComponent {
 
   public product!: Product;
 
-  constructor(private route: ActivatedRoute,
-              private router: Router  ) {
+  constructor(
+    private snackBar: MatSnackBar,
+    private route: ActivatedRoute,
+    private router: Router  ) {
   }
 
 
@@ -43,6 +50,26 @@ export class ProductComponent {
 
   public getProductDescription() {
     return this.product.description;
+  }
+
+  public putOnHold(id: number) {
+
+    fetch('https://fakestoreapi.com/carts',{
+      method:"POST",
+      body:JSON.stringify(
+        {
+          userId: 0,
+          date: new Date().toISOString(),
+          products:[{productId:id,quantity:1}]
+        }
+      )
+    })
+      .then(res=>res.json())
+      .then(json=>console.log(json))
+
+    this.snackBar.open('The product has been placed on hold', 'Close', {duration: 3000})
+
+    this.router.navigate(['/inventory']);
   }
 
 }

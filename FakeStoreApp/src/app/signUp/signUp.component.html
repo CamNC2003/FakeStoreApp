@@ -5,8 +5,9 @@
   <title>Sign-up</title>
 </head>
 <body>
+
 <div>
-  <form  (ngSubmit)="onSubmit()" #signInForm="ngForm">
+  <form  (ngSubmit)="onSubmit()" #signUpForm="ngForm">
 
     <div class="name">
       <label for="firstname">First Name: </label>
@@ -37,7 +38,7 @@
       <input type="text" id="zipcode" required [(ngModel)]="user.zipcode" name="zipcode">
     </div>
 
-    <button type="submit" [disabled]="!signInForm.form.valid">Submit</button>
+    <button type="submit" [disabled]="!signUpForm.form.valid">Submit</button>
   </form>
 </div>
 </body>

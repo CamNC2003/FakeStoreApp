@@ -2,13 +2,19 @@ import { Component } from '@angular/core';
 
 import { Product} from "../shared/Product";
 import {ActivatedRoute, Router} from "@angular/router";
+import {NavComponent} from "../nav/nav.component";
+import {NgForOf} from "@angular/common";
 
 
 @Component({
-    selector: 'app-inventory',
-    templateUrl: './inventory.component.html',
-    styleUrls: ['./inventory.component.css'],
-    standalone: true
+  selector: 'app-inventory',
+  templateUrl: './inventory.component.html',
+  styleUrls: ['./inventory.component.css'],
+  imports: [
+    NavComponent,
+    NgForOf
+  ],
+  standalone: true
 })
 export class InventoryComponent {
 

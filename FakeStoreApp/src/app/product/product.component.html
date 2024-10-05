@@ -5,11 +5,14 @@
   <title>Product</title>
 </head>
 <body>
+
 <h1>{{ getProductTitle()}}</h1>
-<img src="getProductImage()"  alt="image">
+<img [src]=getProductImage() alt="product">
 <h2>{{getProductPrice()}}</h2>
 <p>{{getProductDescription()}}</p>
 
-
+<button type="button" (click)="putOnHold(getProductID())">
+  Put Product on Hold
+</button>
 </body>
 </html>

@@ -6,9 +6,11 @@
 </head>
 <body>
   <div>
-    <form>
+    <form (ngSubmit)="onSubmit()" #signInForm="ngForm">
       <label for="feedback">Feedback</label>
-      <input type="textarea" id="feddback" name="feedback">
+      <input type="textarea" id="feedback" required [(ngModel)]="feedback" name="feedback">
+
+      <button type="submit" [disabled]="!signInForm.form.valid">Submit</button>
     </form>
   </div>
 </body>

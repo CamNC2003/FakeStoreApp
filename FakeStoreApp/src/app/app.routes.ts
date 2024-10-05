@@ -5,17 +5,16 @@ import {AboutComponent} from "./about/about.component";
 import {FeedbackComponent} from "./feedback/feedback.component";
 import {SignInComponent} from "./signIn/signIn.component";
 import {SignUpComponent} from "./signUp/signUp.component";
-import {AccountComponent} from "./account/account.component";
 import {ProductComponent} from "./product/product.component";
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'inventory', component: InventoryComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'feedback', component: FeedbackComponent },
-  { path: 'signIn', component: SignInComponent },
-  { path: 'signUp', component: SignUpComponent },
-  { path: 'account', component: AccountComponent },
-  { path: 'product', component: ProductComponent },
-
+  { path: '', title: 'Home', component: HomeComponent },
+  { path: 'inventory', title: 'Inventory', component: InventoryComponent },
+  { path: 'about', title: 'About', component: AboutComponent },
+  { path: 'feedback', title: 'Feedback', component: FeedbackComponent },
+  { path: 'signIn', title: 'Sign In', component: SignInComponent },
+  { path: 'signUp', title: 'Sign Up', component: SignUpComponent },
+  { path: 'product', title: 'Product', component: ProductComponent },
 ];
+
+
