@@ -1,17 +1,21 @@
 import { Component, OnInit} from '@angular/core';
 
 import { Product} from "../shared/Product";
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {NavComponent} from "../nav/nav.component";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {signedIn} from "../../constants/signedIn";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css'],
-  imports: [
-    NavComponent
-  ],
+    imports: [
+        NavComponent,
+        NgIf,
+        RouterLink
+    ],
   standalone: true
 })
 export class ProductComponent {
@@ -67,9 +71,15 @@ export class ProductComponent {
       .then(res=>res.json())
       .then(json=>console.log(json))
 
-    this.snackBar.open('The product has been placed on hold', 'Close', {duration: 3000})
 
-    this.router.navigate(['/inventory']);
+
+    this.snackBar.open('The product has been placed on hold', 'Close', {
+      duration: 500
+    }).afterDismissed().subscribe(()=>{
+      this.router.navigate(['/inventory']);
+    });
+
   }
 
+    protected readonly signedIn = signedIn;
 }

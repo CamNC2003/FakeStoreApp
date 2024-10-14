@@ -5,19 +5,28 @@
   <title>Inventory</title>
 </head>
 <body>
-<h1>Products</h1>
 
-<ul>
-  <li *ngFor="let product of products; let i = index">
-    <img [src]=getProductImage(i)  alt="image">
-    <p>{{getProductTitle(i)}}</p>
-    <p>${{getProductPrice(i)}}</p>
+
+<div>
+  <h1>Products</h1>
+</div>
+<div id="inventory">
+
+  <div class="productDisplay" *ngFor="let product of products; let i = index">
+
+    <img class="productImage" [src]=getProductImage(i)  alt="image">
+    <h2>{{getProductTitle(i)}}</h2>
+    <h2>${{getProductPrice(i)}}</h2>
 
     <button type="button" (click)="viewProduct(getProductID(i-1))">
-      View Product
+      <b>View Product</b>
     </button>
-  </li>
-</ul>
+</div>
+
+
+
+
+    </div>
 
 
 </body>

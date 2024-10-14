@@ -5,13 +5,24 @@
   <title>Feedback</title>
 </head>
 <body>
-  <div>
-    <form (ngSubmit)="onSubmit()" #signInForm="ngForm">
-      <label for="feedback">Feedback</label>
-      <input type="textarea" id="feedback" required [(ngModel)]="feedback" name="feedback">
 
-      <button type="submit" [disabled]="!signInForm.form.valid">Submit</button>
-    </form>
+
+<div><h1>Feedback</h1></div>
+
+<form (ngSubmit)="onSubmit()" #signInForm="ngForm" id="feedbackForm">
+  <div>
+    <textarea id="feedback" required [(ngModel)]="feedback" name="feedback" rows="10" cols="60" placeholder="Please enter your feedback.">
+      Please enter your feedback.
+    </textarea>
+
+
+    <button type="submit" [disabled]="!signInForm.form.valid">Submit</button>
+
+
+    <img src="https://www.creativefabrica.com/wp-content/uploads/2022/11/24/People-communication-concept-Graphics-48213200-1-1-580x386.png" alt="People talking">
   </div>
+
+</form>
+
 </body>
 </html>

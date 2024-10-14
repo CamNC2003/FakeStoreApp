@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 import { Product} from "../shared/Product";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NavComponent} from "../nav/nav.component";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
+
 
 
 @Component({
@@ -12,7 +13,8 @@ import {NgForOf} from "@angular/common";
   styleUrls: ['./inventory.component.css'],
   imports: [
     NavComponent,
-    NgForOf
+    NgForOf,
+    NgIf
   ],
   standalone: true
 })
@@ -49,7 +51,6 @@ export class InventoryComponent {
   public viewProduct(id: number) {
     this.router.navigate(['/product', {id: this.getProductID(id)}]);
   }
-
 
 
 }

@@ -28,23 +28,31 @@ export class SignInComponent {
 
   onSubmit(){
 
-    console.log(this.user.username);
-    console.log(this.user.password);
 
-    fetch('https://fakestoreapi.com/auth/login',{
-      method:'POST',
-      body:JSON.stringify({
-        username: this.user.username,
-        password: this.user.password
+
+    if (this.user.username == "johnd" && this.user.password == "m38rmF$"){
+      signedIn.value = 'true';
+
+      fetch('https://fakestoreapi.com/auth/login',{
+        method:'POST',
+        body:JSON.stringify({
+          username: "johnd",
+          password: "m38rmF$"
+        })
       })
-    })
-      .then(res=>res.json())
-      .then(json=>console.log(json))
+        .then(res=>res.json())
+        .then(json=>console.log(json))
 
-    signedIn.value = 'true';
+      this.snackBar.open('You have successfully signed in.', 'Close', {
+        duration: 500
+      }).afterDismissed().subscribe(()=>{
+        this.router.navigate(['/']);
+      });
+    }
+    else{
+      this.snackBar.open("Incorrect Username or Password", 'Close', {duration: 3000})
+    }
 
-    this.snackBar.open("You have successfully signed in.", 'Close', {duration: 3000})
-    this.router.navigate(['/'])
 
   }
 }

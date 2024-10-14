@@ -1,0 +1,49 @@
+*{
+  font-family: "Comic Sans MS", serif;
+  background-color: #42d9db;
+}
+
+
+
+h1 {
+  text-align: center;
+}
+
+div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.productImage {
+
+  max-width: 15%;
+  max-height: 15%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30pt;
+}
+
+p {
+
+  margin: auto;
+}
+
+#paragraph {
+  margin: auto;
+  max-width: 40%;
+  max-height: 30%;
+}
+
+
+button {
+  font-size: 18pt;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #00FF00;
+}

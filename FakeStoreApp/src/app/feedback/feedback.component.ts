@@ -27,11 +27,11 @@ export class FeedbackComponent {
   onSubmit() {
     console.log(this.feedback);
 
-
-
-    window.location.reload()
-
-    this.snackBar.open("Your feedback has been submitted.", 'Close', {duration: 3000});
+    this.snackBar.open("Your feedback has been submitted.", 'Close', {
+      duration: 1000
+    }).afterDismissed().subscribe(()=>{
+      window.location.reload();
+    });
 
   }
 

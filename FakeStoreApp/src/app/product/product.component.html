@@ -6,13 +6,34 @@
 </head>
 <body>
 
-<h1>{{ getProductTitle()}}</h1>
-<img [src]=getProductImage() alt="product">
-<h2>{{getProductPrice()}}</h2>
-<p>{{getProductDescription()}}</p>
 
-<button type="button" (click)="putOnHold(getProductID())">
-  Put Product on Hold
-</button>
+<div>
+  <h1>{{ getProductTitle()}}</h1>
+  <img class="productImage" [src]=getProductImage() alt="product">
+  <h2>${{getProductPrice()}}</h2>
+
+  <div id="paragraph">
+    <p>{{getProductDescription()}}</p>
+  </div>
+
+  <div *ngIf="signedIn.value == 'false'">
+    <h2>Please Sign In to Put on Hold</h2>
+  </div>
+
+  <div *ngIf="signedIn.value == 'true'">
+    <button type="button" (click)="putOnHold(getProductID())">
+      Put Product on Hold
+    </button>
+  </div>
+
+
+
+
+
+</div>
+
+
+
+
 </body>
 </html>

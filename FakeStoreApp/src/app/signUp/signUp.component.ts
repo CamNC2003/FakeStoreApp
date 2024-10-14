@@ -57,9 +57,13 @@ export class SignUpComponent {
 
     signedIn.value = 'true';
 
-    this.snackBar.open('You have successfully signed up', 'Close', {duration: 3000})
+    this.snackBar.open('You have successfully signed up.', 'Close', {
+      duration: 500
+    }).afterDismissed().subscribe(()=>{
+      this.router.navigate(['/']);
+    });
 
-    this.router.navigate(['/'])
+
   }
 
 }
