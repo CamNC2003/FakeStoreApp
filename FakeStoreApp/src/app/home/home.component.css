@@ -1,0 +1,24 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+*{
+  font-family: "Comic Sans MS", serif;
+
+  background-color: #fca308;
+}
+
+#fakeLogo {
+  display: block;
+
+  max-width: 50%;
+  max-height: 50%;
+}
+
+#homeDiv {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

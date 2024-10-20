@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\FurnitureStoreApp",
+    "\\FurnitureStoreApp\\src",
+    "\\FurnitureStoreApp\\src\\app",
+    "\\FurnitureStoreApp\\src\\app\\about",
+    "\\FurnitureStoreApp\\src\\app\\feedback",
+    "\\FurnitureStoreApp\\src\\app\\home",
+    "\\FurnitureStoreApp\\src\\app\\inventory",
+    "\\FurnitureStoreApp\\src\\app\\signIn"
+  ],
+  "SelectedNode": "\\FurnitureStoreApp\\src\\app\\home\\home.component.html",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback</title>
+</head>
+<body>
+
+
+<div><h1>Feedback</h1></div>
+
+<form (ngSubmit)="onSubmit()" #signInForm="ngForm" id="feedbackForm">
+  <div>
+    <textarea id="feedback" required [(ngModel)]="feedback" name="feedback" rows="10" cols="60" placeholder="Please enter your feedback.">
+      Please enter your feedback.
+    </textarea>
+
+
+    <button type="submit" [disabled]="!signInForm.form.valid">Submit</button>
+
+
+    <img src="https://www.creativefabrica.com/wp-content/uploads/2022/11/24/People-communication-concept-Graphics-48213200-1-1-580x386.png" alt="People talking">
+  </div>
+
+</form>
+
+</body>
+</html>

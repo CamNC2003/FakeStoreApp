@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventory</title>
+</head>
+<body>
+
+
+<div>
+  <h1>Products</h1>
+</div>
+<div id="inventory">
+
+  <div class="productDisplay" *ngFor="let product of products; let i = index">
+
+    <img class="productImage" [src]=getProductImage(i)  alt="image">
+    <h2>{{getProductTitle(i)}}</h2>
+    <h2>${{getProductPrice(i)}}</h2>
+
+    <button type="button" (click)="viewProduct(getProductID(i-1))">
+      <b>View Product</b>
+    </button>
+</div>
+
+
+
+
+    </div>
+
+
+</body>
+</html>

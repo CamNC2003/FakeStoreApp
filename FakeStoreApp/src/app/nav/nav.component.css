@@ -1,0 +1,26 @@
+*{
+  font-family: "Comic Sans MS", serif;
+  font-size: 16px;
+  background-color: #fca308;
+}
+
+nav {
+  list-style: none;
+  text-align: center;
+  padding: 20px 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  margin: 0px;
+}
+
+
+#signInDiv {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
